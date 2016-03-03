@@ -1,33 +1,22 @@
 package com.example.amankumar.huest;
 
-import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
-    Toolbar toolbar;
-    Button loginButton;
-    Button signUpButton;
+public class GuestActivity extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        toolbar = (Toolbar) findViewById(R.id.app_bar);
-        setSupportActionBar(toolbar);
-        loginButton= (Button) findViewById(R.id.logInButton);
-        signUpButton= (Button) findViewById(R.id.logInButton);
+        setContentView(R.layout.activity_guest);
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_guest, menu);
         return true;
     }
 
@@ -44,10 +33,5 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    public void signUp(View view) {
-        Intent intent=new Intent(this,GuestOrHostActivity.class);
-        startActivity(intent);
     }
 }

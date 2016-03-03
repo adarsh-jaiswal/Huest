@@ -1,33 +1,32 @@
 package com.example.amankumar.huest;
 
 import android.content.Intent;
-import android.os.Bundle;
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class GuestOrHostActivity extends AppCompatActivity {
+
     Toolbar toolbar;
-    Button loginButton;
-    Button signUpButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        toolbar = (Toolbar) findViewById(R.id.app_bar);
+        setContentView(R.layout.activity_guest_or_host);
+        toolbar= (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
-        loginButton= (Button) findViewById(R.id.logInButton);
-        signUpButton= (Button) findViewById(R.id.logInButton);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setTitle("SignUp As");
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_guest_or_host, menu);
         return true;
     }
 
@@ -42,12 +41,14 @@ public class MainActivity extends AppCompatActivity {
         if (id == R.id.action_settings) {
             return true;
         }
-
+        if(id==android.R.id.home){
+            NavUtils.navigateUpFromSameTask(this);
+        }
         return super.onOptionsItemSelected(item);
     }
 
-    public void signUp(View view) {
-        Intent intent=new Intent(this,GuestOrHostActivity.class);
+    public void guestHandler(View view) {
+        Intent intent=new Intent(this,SinupActivity.class);
         startActivity(intent);
     }
 }

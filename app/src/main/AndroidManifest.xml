@@ -16,6 +16,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".SinupActivity"
+            android:label="@string/title_activity_sinup"
+            android:parentActivityName=".GuestOrHostActivity" >
+        </activity>
+        <activity
+            android:name=".GuestOrHostActivity"
+            android:label="@string/title_activity_guest_or_host"
+            android:parentActivityName=".MainActivity" >
+        </activity>
+        <activity
+            android:name=".GuestActivity"
+            android:label="@string/title_activity_guest" >
+        </activity>
     </application>
 
 </manifest>
