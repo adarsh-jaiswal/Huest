@@ -1,27 +1,32 @@
 package com.example.amankumar.huest;
 
+import android.content.Intent;
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
-public class GuestActivity extends AppCompatActivity {
+public class HostSignUpActivity extends AppCompatActivity {
 
     Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_guest);
+        setContentView(R.layout.activity_host_sign_up);
         toolbar= (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Huest");
+        getSupportActionBar().setTitle("SignUp As Host");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_guest, menu);
+        getMenuInflater().inflate(R.menu.menu_host_sign_up, menu);
         return true;
     }
 
@@ -36,6 +41,13 @@ public class GuestActivity extends AppCompatActivity {
         if (id == R.id.action_settings) {
             return true;
         }
+        if(id==android.R.id.home){
+            NavUtils.navigateUpFromSameTask(this);
+        }
         return super.onOptionsItemSelected(item);
+    }
+    public void hostRegisterHandler(View view) {
+        Intent intent=new Intent(this,HostActivity.class);
+        startActivity(intent);
     }
 }

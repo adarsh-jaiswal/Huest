@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SinupActivity"
+            android:name=".GuestSignUpActivity"
             android:label="@string/title_activity_sinup"
             android:parentActivityName=".GuestOrHostActivity" >
         </activity>
@@ -29,6 +29,14 @@
         <activity
             android:name=".GuestActivity"
             android:label="@string/title_activity_guest" >
+        </activity>
+        <activity
+            android:name=".HostSignUpActivity"
+            android:label="@string/title_activity_host_sign_up" >
+        </activity>
+        <activity
+            android:name=".HostActivity"
+            android:label="@string/title_activity_host" >
         </activity>
     </application>
 

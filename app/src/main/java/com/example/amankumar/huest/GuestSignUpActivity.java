@@ -1,21 +1,23 @@
 package com.example.amankumar.huest;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
-public class SinupActivity extends AppCompatActivity {
+public class GuestSignUpActivity extends AppCompatActivity {
     Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sinup);
+        setContentView(R.layout.activity_guest_sinup);
         toolbar= (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("SignUp");
+        getSupportActionBar().setTitle("SignUp As Guest");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -44,5 +46,10 @@ public class SinupActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void registerHandler(View view) {
+        Intent intent=new Intent(this,GuestActivity.class);
+        startActivity(intent);
     }
 }

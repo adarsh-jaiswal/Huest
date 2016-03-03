@@ -2,7 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.amankumar.huest.GuestActivity">
+    tools:context="com.example.amankumar.huest.HostActivity">
+
     <include
         android:id="@+id/app_bar"
         layout="@layout/appbar" />
@@ -19,25 +20,7 @@
             android:gravity="center"
             android:layout_marginTop="50dp"
             android:textColor="@color/colorTextBlack"
-            android:text="Welcome User"
+            android:text="We will notify You If u have any Orders"
             />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:gravity="center"
-            android:layout_marginTop="20dp"
-            android:textColor="@color/colorTextBlack"
-            android:text="Best food solutions is just a tap away"
-            />
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/FindHostButton"
-            android:layout_marginTop="30dp"
-            android:text="FIND HOST"
-            android:background="@color/primaryColor"
-            android:textColor="@color/colorText"/>
-    </LinearLayout>
-
+        </LinearLayout>
 </LinearLayout>

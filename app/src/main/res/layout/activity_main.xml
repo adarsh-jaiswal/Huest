@@ -13,8 +13,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
+        android:layout_marginLeft="@dimen/marginLeft"
+        android:layout_marginRight="@dimen/marginRight"
         android:orientation="vertical">
 
 
@@ -25,12 +25,12 @@
             android:layout_marginTop="70dp"
             android:hint="Email or Mobile Number"
             android:singleLine="true"
-            android:nextFocusDown="@+id/password"
+            android:nextFocusDown="@+id/hostPassword"
             android:textColorHint="@color/colorSecondaryText"
             android:textSize="16sp" />
 
         <EditText
-            android:id="@+id/password"
+            android:id="@+id/hostPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -48,7 +48,6 @@
             android:layout_marginTop="20dp"
             android:background="@color/primaryColor"
             android:textColor="@color/colorText"
-            android:onClick="login"
             android:elevation="4dp"
             android:text="Login" />
 

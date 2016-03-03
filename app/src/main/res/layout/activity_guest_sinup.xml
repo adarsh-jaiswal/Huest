@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.amankumar.huest.SinupActivity">
+    tools:context="com.example.amankumar.huest.GuestSignUpActivity">
 
     <include
         android:id="@+id/app_bar"
@@ -12,8 +12,8 @@
        android:layout_height="wrap_content"
        android:orientation="horizontal"
        android:layout_marginTop="20dp"
-       android:layout_marginLeft="10dp"
-       android:layout_marginRight="10dp"
+       android:layout_marginLeft="@dimen/marginLeft"
+       android:layout_marginRight="@dimen/marginRight"
        android:weightSum="100">
        <TextView
            android:layout_width="match_parent"
@@ -33,25 +33,25 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginLeft="@dimen/marginLeft"
+        android:layout_marginRight="@dimen/marginRight"
         android:orientation="horizontal"
         android:weightSum="100">
         <EditText
-            android:id="@+id/firstName"
+            android:id="@+id/hostFirstName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="50"
-            android:nextFocusDown="@+id/lastName"
+            android:nextFocusDown="@+id/hostLastName"
             android:singleLine="true"
             android:textColor="@color/colorTextBlack"/>
         <EditText
-            android:id="@+id/lastName"
+            android:id="@+id/hostLastName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="50"
             android:singleLine="true"
-            android:nextFocusDown="@+id/email"
+            android:nextFocusDown="@+id/hostEmail"
             android:textColor="@color/colorTextBlack"/>
     </LinearLayout>
     <LinearLayout
@@ -59,8 +59,8 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginTop="20dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp">
+        android:layout_marginLeft="@dimen/marginLeft"
+        android:layout_marginRight="@dimen/marginRight">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -70,11 +70,11 @@
         android:text="EMAIL"
         />
         <EditText
-            android:id="@+id/email"
+            android:id="@+id/hostEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:singleLine="true"
-            android:nextFocusDown="@+id/mobileNumber"
+            android:nextFocusDown="@+id/hostMobileNumber"
             android:textColor="@color/colorTextBlack"/>
     </LinearLayout>
     <LinearLayout
@@ -82,8 +82,8 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginTop="20dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp">
+        android:layout_marginLeft="@dimen/marginLeft"
+        android:layout_marginRight="@dimen/marginRight">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -93,7 +93,7 @@
             android:text="MOBILE"
             />
         <EditText
-            android:id="@+id/mobileNumber"
+            android:id="@+id/hostMobileNumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/colorTextBlack"
@@ -106,8 +106,8 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginTop="20dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp">
+        android:layout_marginLeft="@dimen/marginLeft"
+        android:layout_marginRight="@dimen/marginRight">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -117,18 +117,19 @@
             android:text="PASSWORD"
             />
         <EditText
-            android:id="@+id/password"
+            android:id="@+id/hostPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:nextFocusDown="@+id/RegisterButton"
+            android:nextFocusDown="@+id/hostRegisterButton"
             android:textColor="@color/colorTextBlack"
             android:inputType="textPassword" />
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/RegisterButton"
+            android:id="@+id/hostRegisterButton"
             android:layout_marginTop="20dp"
             android:text="REGISTER"
+            android:onClick="registerHandler"
             android:background="@color/primaryColor"
             android:textColor="@color/colorText"/>
     </LinearLayout>

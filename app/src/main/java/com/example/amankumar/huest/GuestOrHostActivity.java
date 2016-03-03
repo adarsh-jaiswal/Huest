@@ -48,7 +48,12 @@ public class GuestOrHostActivity extends AppCompatActivity {
     }
 
     public void guestHandler(View view) {
-        Intent intent=new Intent(this,SinupActivity.class);
+        Intent intent=new Intent(this,GuestSignUpActivity.class);
+        startActivity(intent);
+    }
+
+    public void hostHandler(View view) {
+        Intent intent=new Intent(this,HostSignUpActivity.class);
         startActivity(intent);
     }
 }
