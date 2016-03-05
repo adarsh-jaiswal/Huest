@@ -1,32 +1,41 @@
-package com.example.amankumar.huest;
+package com.example.amankumar.huest.UI;
 
 import android.content.Intent;
-import android.support.v4.app.NavUtils;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 
-public class GuestOrHostActivity extends AppCompatActivity {
+import com.example.amankumar.huest.R;
+import com.firebase.client.Firebase;
 
+public class MainActivity extends AppCompatActivity {
     Toolbar toolbar;
+    Button loginButton;
+    Button signUpButton;
+    EditText emailEditText, passwordEditText;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_guest_or_host);
-        toolbar= (Toolbar) findViewById(R.id.app_bar);
+        setContentView(R.layout.activity_main);
+        toolbar = (Toolbar) findViewById(R.id.app_bar);
+        Firebase.setAndroidContext(this);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setTitle("SignUp As");
+        loginButton= (Button) findViewById(R.id.logInButton);
+        signUpButton= (Button) findViewById(R.id.logInButton);
+        emailEditText = (EditText) findViewById(R.id.userIdText);
+        passwordEditText = (EditText) findViewById(R.id.Password);
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_guest_or_host, menu);
+        getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
@@ -41,19 +50,16 @@ public class GuestOrHostActivity extends AppCompatActivity {
         if (id == R.id.action_settings) {
             return true;
         }
-        if(id==android.R.id.home){
-            NavUtils.navigateUpFromSameTask(this);
-        }
+
         return super.onOptionsItemSelected(item);
     }
 
-    public void guestHandler(View view) {
-        Intent intent=new Intent(this,GuestSignUpActivity.class);
+    public void signUpButton(View view) {
+        Intent intent=new Intent(this,GuestOrHostActivity.class);
         startActivity(intent);
     }
 
-    public void hostHandler(View view) {
-        Intent intent=new Intent(this,HostSignUpActivity.class);
-        startActivity(intent);
+    public void loginButton(View view) {
+
     }
 }

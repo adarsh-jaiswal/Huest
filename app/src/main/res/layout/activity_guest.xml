@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.amankumar.huest.GuestActivity">
+    tools:context="com.example.amankumar.huest.UI.GuestActivity">
     <include
         android:id="@+id/app_bar"
         layout="@layout/appbar" />
@@ -39,5 +39,12 @@
             android:background="@color/primaryColor"
             android:textColor="@color/colorText"/>
     </LinearLayout>
+    <TextView
+        android:id="@+id/textChanged"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Value change will be here"
+        android:gravity="center"
+        android:layout_marginTop="20dp"/>
 
 </LinearLayout>

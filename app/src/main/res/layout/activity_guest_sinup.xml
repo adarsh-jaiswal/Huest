@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.amankumar.huest.GuestSignUpActivity">
+    tools:context="com.example.amankumar.huest.UI.GuestSignUpActivity">
 
     <include
         android:id="@+id/app_bar"
@@ -117,7 +117,7 @@
             android:text="PASSWORD"
             />
         <EditText
-            android:id="@+id/hostPassword"
+            android:id="@+id/Password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:nextFocusDown="@+id/hostRegisterButton"

@@ -1,27 +1,34 @@
-package com.example.amankumar.huest;
+package com.example.amankumar.huest.UI;
 
+import android.content.Intent;
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
-public class GuestActivity extends AppCompatActivity {
+import com.example.amankumar.huest.R;
+
+public class GuestOrHostActivity extends AppCompatActivity {
 
     Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_guest);
+        setContentView(R.layout.activity_guest_or_host);
         toolbar= (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Huest");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setTitle("SignUp As");
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_guest, menu);
+        getMenuInflater().inflate(R.menu.menu_guest_or_host, menu);
         return true;
     }
 
@@ -36,6 +43,19 @@ public class GuestActivity extends AppCompatActivity {
         if (id == R.id.action_settings) {
             return true;
         }
+        if(id==android.R.id.home){
+            NavUtils.navigateUpFromSameTask(this);
+        }
         return super.onOptionsItemSelected(item);
+    }
+
+    public void guestHandler(View view) {
+        Intent intent=new Intent(this,GuestSignUpActivity.class);
+        startActivity(intent);
+    }
+
+    public void hostHandler(View view) {
+        Intent intent=new Intent(this,HostSignUpActivity.class);
+        startActivity(intent);
     }
 }
