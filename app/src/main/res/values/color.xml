@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="primaryColor">#5D4037</color>
-    <color name="primaryColorDark">#3E2723</color>
+    <color name="primaryColor">#83CF1C</color>
+    <color name="primaryColorDark">#5AB831</color>
     <color name="colorAccent">#FFA726</color>
     <color name="colorText">#FFFFFF</color>
     <color name="colorTextBlack">#000</color>
     <color name="colorBackground">#FFFFFF</color>
-    <color name="primaryColorLight">#BDBDBD</color>
+    <color name="primaryColorLight">#DCEDC8</color>
     <color name="colorSecondaryText">#727272</color>
-    <color name="googlePlus">#dd4b39</color>
+    <color name="google">#C6412C</color>
 </resources>

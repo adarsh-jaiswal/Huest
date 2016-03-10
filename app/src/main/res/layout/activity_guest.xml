@@ -38,13 +38,11 @@
             android:text="FIND HOST"
             android:background="@color/primaryColor"
             android:textColor="@color/colorText"/>
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ListView"
+            ></ListView>
     </LinearLayout>
-    <TextView
-        android:id="@+id/textChanged"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Value change will be here"
-        android:gravity="center"
-        android:layout_marginTop="20dp"/>
 
 </LinearLayout>

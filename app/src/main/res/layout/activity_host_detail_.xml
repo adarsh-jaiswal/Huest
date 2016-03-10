@@ -1,0 +1,30 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.amankumar.huest.UI.HostDetail_Activity">
+
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/appbar" />
+
+    <TextView
+        android:id="@+id/host_detail_first_name"
+        android:layout_below="@+id/app_bar"
+        android:hint="text"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:textSize="16sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:id="@+id/host_detail_email"
+        android:layout_below="@+id/host_detail_first_name"
+        android:layout_width="match_parent"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp" />
+
+</RelativeLayout>

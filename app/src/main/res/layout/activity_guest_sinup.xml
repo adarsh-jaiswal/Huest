@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.amankumar.huest.UI.GuestSignUpActivity">
+    tools:context="com.example.amankumar.huest.Login.GuestSignUpActivity">
 
     <include
         android:id="@+id/app_bar"
@@ -38,20 +38,20 @@
         android:orientation="horizontal"
         android:weightSum="100">
         <EditText
-            android:id="@+id/hostFirstName"
+            android:id="@+id/GuestFirstName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="50"
-            android:nextFocusDown="@+id/hostLastName"
+            android:nextFocusDown="@+id/GuestLastName"
             android:singleLine="true"
             android:textColor="@color/colorTextBlack"/>
         <EditText
-            android:id="@+id/hostLastName"
+            android:id="@+id/GuestLastName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="50"
             android:singleLine="true"
-            android:nextFocusDown="@+id/hostEmail"
+            android:nextFocusDown="@+id/GuestEmail"
             android:textColor="@color/colorTextBlack"/>
     </LinearLayout>
     <LinearLayout
@@ -70,11 +70,11 @@
         android:text="EMAIL"
         />
         <EditText
-            android:id="@+id/hostEmail"
+            android:id="@+id/GuestEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:singleLine="true"
-            android:nextFocusDown="@+id/hostMobileNumber"
+            android:nextFocusDown="@+id/GuestMobileNumber"
             android:textColor="@color/colorTextBlack"/>
     </LinearLayout>
     <LinearLayout
@@ -93,7 +93,7 @@
             android:text="MOBILE"
             />
         <EditText
-            android:id="@+id/hostMobileNumber"
+            android:id="@+id/GuestMobileNumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/colorTextBlack"
@@ -117,19 +117,19 @@
             android:text="PASSWORD"
             />
         <EditText
-            android:id="@+id/Password"
+            android:id="@+id/GuestPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:nextFocusDown="@+id/hostRegisterButton"
+            android:nextFocusDown="@+id/GuestRegisterButton"
             android:textColor="@color/colorTextBlack"
             android:inputType="textPassword" />
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/hostRegisterButton"
+            android:id="@+id/GuestRegisterButton"
             android:layout_marginTop="20dp"
             android:text="REGISTER"
-            android:onClick="registerHandler"
+            android:onClick="GuestRegisterHandler"
             android:background="@color/primaryColor"
             android:textColor="@color/colorText"/>
     </LinearLayout>
