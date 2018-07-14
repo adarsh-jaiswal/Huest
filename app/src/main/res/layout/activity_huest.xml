@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.amankumar.huest.UI.HostActivity">
+    tools:context="com.example.amankumar.huest.UI.HuestActivity">
 
     <include
         android:id="@+id/app_bar"
@@ -13,14 +13,6 @@
         android:orientation="vertical"
         android:layout_marginRight="@dimen/marginRight"
         android:layout_marginLeft="@dimen/marginLeft">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:gravity="center"
-            android:layout_marginTop="50dp"
-            android:textColor="@color/colorTextBlack"
-            android:text="We will notify You If u have any Orders"
-            />
+
         </LinearLayout>
 </LinearLayout>

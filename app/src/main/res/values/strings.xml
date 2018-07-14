@@ -20,10 +20,9 @@
     <string name="action_example">Example action</string>
     <string name="title_activity_sinup">SinupActivity</string>
     <string name="title_activity_login">LoginActivity</string>
-    <string name="title_activity_guest_or_host">GuestOrHostActivity</string>
     <string name="title_activity_guest">GuestActivity</string>
     <string name="title_activity_host_sign_up">HostSignUpActivity</string>
-    <string name="title_activity_host">HostActivity</string>
+    <string name="title_activity_host">Huest</string>
     <string name="title_activity_host_detail_">HostDetail_Activity</string>
 
     <string name="dialog_title_error">Error</string>
@@ -36,4 +35,7 @@
     <string name="error_email_taken">The email is already taken.</string>
     <string name="error_invalid_password_not_valid">Please enter a password that is at least 6 characters long.</string>
     <string name="error_cannot_be_empty">This cannot be empty.</string>
+    <string name="logout">Logout</string>
+    <string name="title_activity_change_password">ChangePassword</string>
+    <string name="title_activity_guest_or_huest">GuestOrHuestActivity</string>
 </resources>

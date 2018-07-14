@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.amankumar.huest" >
+    package="com.example.amankumar.huest">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -8,10 +8,11 @@
         android:allowBackup="true"
         android:icon="@drawable/app"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
         <activity
             android:name=".Login.LogInActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,31 +20,21 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Login.GuestSignUpActivity"
-            android:label="@string/title_activity_sinup"
-            android:parentActivityName=".Login.GuestOrHostActivity" >
-        </activity>
+            android:name=".Login.SignUpActivity"
+            android:label="@string/title_activity_host_sign_up"
+            android:parentActivityName=".Login.GuestOrHuestActivity"
+            android:screenOrientation="portrait" />
         <activity
-            android:name=".Login.GuestOrHostActivity"
-            android:label="@string/title_activity_guest_or_host"
-            android:parentActivityName=".Login.LogInActivity" >
-        </activity>
+            android:name=".UI.HuestActivity"
+            android:label="@string/title_activity_host"></activity>
         <activity
-            android:name=".UI.GuestActivity"
-            android:label="@string/title_activity_guest" >
-        </activity>
+            android:name=".UI.ChangePassword"
+            android:label="@string/title_activity_change_password"
+            android:parentActivityName=".UI.HuestActivity"></activity>
         <activity
-            android:name=".Login.HostSignUpActivity"
-            android:label="@string/title_activity_host_sign_up" >
-        </activity>
-        <activity
-            android:name=".UI.HostActivity"
-            android:label="@string/title_activity_host" >
-        </activity>
-        <activity
-            android:name=".UI.HostDetail_Activity"
-            android:label="@string/title_activity_host_detail_" >
-        </activity>
+            android:name=".Login.GuestOrHuestActivity"
+            android:label="@string/title_activity_guest_or_huest"
+            android:parentActivityName=".Login.LogInActivity"></activity>
     </application>
 
 </manifest>

@@ -14,18 +14,18 @@ public class HuestPeople {
     String firstName;
     String lastName;
     String mobile;
-    String password;
+    Boolean hasLoggedInForTheFirstTime;
     private HashMap<String, Object> timestampLastChanged;
 
     public HuestPeople() {
     }
 
-    public HuestPeople(String firstName, String email, String lastName, String password, String mobile) {
+    public HuestPeople(String firstName, String email, String lastName,String mobile) {
         this.firstName = firstName;
         this.email = email;
         this.lastName = lastName;
-        this.password = password;
         this.mobile = mobile;
+        this.hasLoggedInForTheFirstTime=false;
         HashMap<String, Object> timeStampLastChangedObj = new HashMap<>();
         timeStampLastChangedObj.put(Constants.FIREBASE_PROPERTY_TIMESTAMP, ServerValue.TIMESTAMP);
         this.timestampLastChanged = timeStampLastChangedObj;
@@ -47,14 +47,13 @@ public class HuestPeople {
         return mobile;
     }
 
-    public String getPassword() {
-        return password;
-    }
-
     public HashMap<String, Object> getTimestampLastChanged() {
         return timestampLastChanged;
     }
 
+    public Boolean isHasLoggedInForTheFirstTime() {
+        return hasLoggedInForTheFirstTime;
+    }
 
     @JsonIgnore
     public long getTimestampLastChangedLong() {
